@@ -18,6 +18,17 @@ public class EmployeService {
     @Autowired
     private EmployeRepository employeRepository;
 
+    @Autowired
+    private DummyService dummyService;
+
+    public Boolean executeDummy(){
+        Integer myInt = dummyService.doSomething();
+        if(myInt > 0){
+            return true;
+        }
+        return false;
+    }
+
     /**
      * Méthode enregistrant un nouvel employé dans l'entreprise
      *
