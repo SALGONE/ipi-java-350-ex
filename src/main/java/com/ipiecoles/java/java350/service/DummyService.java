@@ -4,7 +4,7 @@ import org.springframework.stereotype.Service;
 
 @Service
 public class DummyService {
-    public Integer doSomething(){
+    public static Integer doSomething(){
         throw new RuntimeException();
     }
 }
